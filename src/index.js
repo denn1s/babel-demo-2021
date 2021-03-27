@@ -1,8 +1,19 @@
-console.log('hallo')
+/* eslint-disable no-alert */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable no-undef */
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const b = {
-  a: 1
-}
+import MiButton from './components/Button'
 
-console.log({ ...b })
-console.log(b?.c?.e?.f)
+const App = () => (
+  <div>
+    <MiButton onClick={() => alert('tRee')} />
+    <MiButton title="hey" onClick={() => alert('two')} />
+  </div>
+)
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root'),
+)
